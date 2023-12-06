@@ -1,5 +1,5 @@
 import streamlit as st
-from app import User, db
+from app.db import DB
 
 def register_page():
     st.title("Register")
