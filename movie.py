@@ -1,5 +1,4 @@
 import csv
-import torch
 import streamlit as st
 from transformers import BertTokenizer, BertModel
 from sklearn.metrics.pairwise import cosine_similarity
