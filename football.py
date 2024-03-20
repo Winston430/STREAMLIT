@@ -17,8 +17,6 @@ filtered_highlights = [h for h in highlights if h["league"] == selected_league]
 if filtered_highlights:
     st.header(f"Highlights from {selected_league}")
     for highlight in filtered_highlights:
-        st.header(f"{highlight['date']} - {highlight['teams']}")
-        st.subheader(highlight["title"])
         st.video(highlight["video_url"])
 else:
     st.write(f"No highlights available for {selected_league}.")
