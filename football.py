@@ -18,5 +18,5 @@ filtered_highlights = [h for h in highlights if h["date"] == selected_date]
 for highlight in filtered_highlights:
     st.header(f"{highlight['date']} - {highlight['teams']}")
     st.subheader(highlight["title"])
-    st.video(highlight["video_url"])
+    st.video(highlight["https://www.youtube.com/watch?v=Wl9EmRip9V4"])
 
