@@ -8,8 +8,6 @@ highlights = [
     {"date": "2023-11-12", "teams": "Barcelona vs Real Madrid", "title": "Messi Magic", "video_url": "https://example.com/video2.mp4"},
 ]
 
-]
-
 # Title and Introduction
 st.title("Football Highlights")
 st.write("Catch up on all the latest action from the world of football!")
