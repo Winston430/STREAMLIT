@@ -1,13 +1,7 @@
 import streamlit as st
 
-# Replace with your data source (list or dictionary)
-highlights = fetch_highlights_from_database()
 highlights = [
-    {"date": "2023-10-26", "teams": "Man United vs Liverpool", "title": "Salah's Wonder Strike", "video_url": "https://example.com/video1.mp4"},
-    {"date": "2023-11-12", "teams": "Barcelona vs Real Madrid", "title": "Messi Magic", "video_url": "https://example.com/video2.mp4"},
-    {"date": "2023-10-26", "teams": "Man United vs Liverpool", "title": "Salah's Wonder Strike", "video_url": "https://example.com/video1.mp4"},
-    {"date": "2023-11-12", "teams": "Barcelona vs Real Madrid", "title": "Messi Magic", "video_url": "https://example.com/video2.mp4"},
-    {"https://www.youtube.com/results?search_query=highlights"},
+    {"premier league": "https://www.youtube.com/results?search_query=highlights"},
 ]
 
 # Title and Introduction
