@@ -2,7 +2,7 @@ import streamlit as st
 
 # Define highlight data (replace with your actual data)
 highlights = [
-    {"league": "Premier League", "video_url": "https://www.youtube.com/results?search_query=premier+league+highlights"},
+    {"league": "Premier League", "video_url": "https://www.premierleague.com/video"},
     {"league": "La Liga", "video_url": "https://www.youtube.com/results?search_query=laliga+highlights"},
     {"league": "Serie A", "video_url": "https://www.youtube.com/results?search_query=serie+A+highlights"},
 ]
