@@ -1,22 +1,25 @@
 import streamlit as st
 
-# Replace with your data source (list or dictionary)
+# Define highlight data (replace with your actual data)
 highlights = [
-    {"date": "2024-03-17", "teams": "Man United vs Liverpool", "title": "Mc Allister's Wonder Strike", "video_url": "https://www.youtube.com/watch?v=Wl9EmRip9V4"},
-    {"date": "2023-11-12", "teams": "Barcelona vs Real Madrid", "title": "Messi Magic", "video_url": "https://example.com/video2.mp4"},
+    {"league": "Premier League", "video_url": "https://www.youtube.com/results?search_query=premier+league+highlights"},
+    {"league": "La Liga", "video_url": "https://www.youtube.com/results?search_query=laliga+highlights"},
+    {"league": "Serie A", "video_url": "https://www.youtube.com/results?search_query=serie+A+highlights"},
 ]
 
-# Title and Introduction
-st.title("Football Highlights")
-st.write("Catch up on all the latest action from the world of football!")
+# Create the menu using st.radio
+selected_league = st.radio("Select League", ["Premier League", "La Liga", "Serie A"])
 
-# Sidebar for filtering (optional)
-selected_date = st.sidebar.selectbox("Filter by Date", [h["date"] for h in highlights])
-filtered_highlights = [h for h in highlights if h["date"] == selected_date]
+# Filter highlights based on selection
+filtered_highlights = [h for h in highlights if h["league"] == selected_league]
 
-# Display Highlights
-for highlight in filtered_highlights:
-    st.header(f"{highlight['date']} - {highlight['teams']}")
-    st.subheader(highlight["title"])
-    st.video(highlight["video_url"])
+# Display Highlights based on selection
+if filtered_highlights:
+    st.header(f"Highlights from {selected_league}")
+    for highlight in filtered_highlights:
+        st.header(f"{highlight['date']} - {highlight['teams']}")
+        st.subheader(highlight["title"])
+        st.video(highlight["video_url"])
+else:
+    st.write(f"No highlights available for {selected_league}.")
 
