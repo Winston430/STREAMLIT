@@ -11,7 +11,7 @@ def main():
     nida = st.text_input("Enter your NIDA number")
 
     if st.button("Check Eligibility"):
-        if age >= 18 and validate_nida(nida) and validate_unique_nida(nida) and country = Tanzania:
+        if age >= 18 and validate_nida(nida) and validate_unique_nida(nida) and validate_country(country) == Tanzania:
             st.success(f"Hello {name}, you are eligible to vote!")
         else:
             st.error(f"Sorry {name}, you are not eligible to vote yet.") 
