@@ -6,13 +6,12 @@ def main():
     
     name = st.text_input("Enter your name")
     age = st.number_input("Enter your age", min_value=0, max_value=150)
-    country = "Tanzania"
-    country = st.text_input("Enter your country")
+    country = st.text_input("Enter your country", Tanzania)
     city = st.text_input("Enter your city")
     nida = st.text_input("Enter your NIDA number")
 
     if st.button("Check Eligibility"):
-        if age >= 18 and validate_nida(nida) and validate_unique_nida(nida) and country == Tanzania:
+        if age >= 18 and validate_nida(nida) and validate_unique_nida(nida) and country == country:
             st.success(f"Hello {name}, you are eligible to vote!")
         else:
             st.error(f"Sorry {name}, you are not eligible to vote yet.") 
